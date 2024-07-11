@@ -28,7 +28,7 @@ export const createAppointment = async (
     revalidatePath("/admin");
     return parseStringify(newAppointment);
   } catch (error) {
-    console.error("An error occurred while creating a new appointment:", error);
+    console.error("Ocorreu um erro ao criar um novo compromisso:", error);
   }
 };
 
@@ -94,7 +94,7 @@ export const getRecentAppointmentList = async () => {
     return parseStringify(data);
   } catch (error) {
     console.error(
-      "An error occurred while retrieving the recent appointments:",
+      "Ocorreu um erro ao recuperar os compromissos recentes:",
       error
     );
   }
@@ -112,7 +112,7 @@ export const sendSMSNotification = async (userId: string, content: string) => {
     );
     return parseStringify(message);
   } catch (error) {
-    console.error("An error occurred while sending sms:", error);
+    console.error("Ocorreu um erro ao enviar sms:", error);
   }
 };
 
@@ -134,13 +134,13 @@ export const updateAppointment = async ({
 
     if (!updatedAppointment) throw Error;
 
-    const smsMessage = `Greetings from CarePulse. ${type === "schedule" ? `Your appointment is confirmed for ${formatDateTime(appointment.schedule!).dateTime} with Dr. ${appointment.primaryPhysician}` : `We regret to inform that your appointment for ${formatDateTime(appointment.schedule!).dateTime} is cancelled. Reason:  ${appointment.cancellationReason}`}.`;
+    const smsMessage = `Saudações de EUREKAE. ${type === "schedule" ? `Sua consulta está confirmada para ${formatDateTime(appointment.schedule!).dateTime} com Dr. ${appointment.primaryPhysician}` : `Lamentamos informar que a sua marcação para ${formatDateTime(appointment.schedule!).dateTime} foi cancelada. Razão:  ${appointment.cancellationReason}`}.`;
     await sendSMSNotification(userId, smsMessage);
 
     revalidatePath("/admin");
     return parseStringify(updatedAppointment);
   } catch (error) {
-    console.error("An error occurred while scheduling an appointment:", error);
+    console.error("Ocorreu um erro ao agendar um compromisso:", error);
   }
 };
 
@@ -156,7 +156,7 @@ export const getAppointment = async (appointmentId: string) => {
     return parseStringify(appointment);
   } catch (error) {
     console.error(
-      "An error occurred while retrieving the existing patient:",
+      "Ocorreu um erro ao recuperar o paciente existente:",
       error
     );
   }
