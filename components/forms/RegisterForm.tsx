@@ -1,4 +1,4 @@
-"use client";
+"us clien";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
@@ -113,7 +113,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             <h2 className="sub-header">Personal Information</h2>
           </div>
 
-          {/*================== NAME ==================*/}
+          {/* ================== NAME ================== */}
 
           <CustomFormField
             fieldType={FormFieldType.INPUT}
@@ -124,7 +124,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             iconAlt="user"
           />
 
-          {/*=================== EMAIL & PHONE================= */}
+          {/* =================== EMAIL & PHONE ================== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
@@ -145,7 +145,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             />
           </div>
 
-          {/*================== BirthDate & Gender ==================*/}
+          {/* ================== BirthDate & Gender ================== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.DATE_PICKER}
@@ -180,7 +180,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             />
           </div>
 
-          {/*=============== Address & Occupation================== */}
+          {/* =============== Address & Occupation =============== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
@@ -195,11 +195,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="occupation"
               label="Occupation"
-              placeholder=" Software Engineer"
+              placeholder="Software Engineer"
             />
           </div>
 
-          {/*============= Emergency Contact Name & Emergency Contact Number =================*/}
+          {/* ====== Emergency Contact Name & Emergency Contact Number ====== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
@@ -224,7 +224,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             <h2 className="sub-header">Medical Information</h2>
           </div>
 
-          {/* ===================PRIMARY CARE PHYSICIAN==============*/}
+          {/* ================== PRIMARY CARE PHYSICIAN ================== */}
           <CustomFormField
             fieldType={FormFieldType.SELECT}
             control={form.control}
@@ -248,7 +248,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             ))}
           </CustomFormField>
 
-          {/* ================INSURANCE & POLICY NUMBER ===================*/}
+          {/* ================== INSURANCE & POLICY NUMBER ================== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.INPUT}
@@ -267,7 +267,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             />
           </div>
 
-          {/* =============ALLERGY & CURRENT MEDICATIONS========= */}
+          {/* ================== ALLERGY & CURRENT MEDICATIONS ================== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
@@ -286,15 +286,13 @@ const RegisterForm = ({ user }: { user: User }) => {
             />
           </div>
 
-
-         
-          {/* ============FAMILY MEDICATION & PAST MEDICATIONS =========*/}
+          {/* ================== FAMILY MEDICAL HISTORY & PAST MEDICAL HISTORY ================== */}
           <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
               name="familyMedicalHistory"
-              label=" Family medical history (if relevant)"
+              label="Family medical history (if relevant)"
               placeholder="Mother had brain cancer, Father has hypertension"
             />
 
@@ -308,11 +306,10 @@ const RegisterForm = ({ user }: { user: User }) => {
           </div>
         </section>
 
-
-            {/* ==========Identification/Verfication============ */}
+        {/* ================== Identification/Verification ================== */}
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Identification and Verfication</h2>
+            <h2 className="sub-header">Identification and Verification</h2>
           </div>
 
           <CustomFormField
@@ -350,7 +347,7 @@ const RegisterForm = ({ user }: { user: User }) => {
           />
         </section>
 
-            {/* ==========Consent/Privacy============ */}
+        {/* ================== Consent/Privacy ================== */}
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
             <h2 className="sub-header">Consent and Privacy</h2>
