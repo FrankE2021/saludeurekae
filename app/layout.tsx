@@ -12,9 +12,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "SALUD EUREKAE",
+  title: "SAÚDE EUREKAE",
   description:
-    "A healthcare patient management System designed to streamline patient registration, appointment scheduling, and medical records management for healthcare providers.",
+    "Um sistema de gerenciamento de pacientes de saúde projetado para agilizar o registro de pacientes, agendamento de consultas e gerenciamento de registros médicos para profissionais de saúde.",
   icons: {
     icon: "/assets/icons/logo-icon.svg",
   },
